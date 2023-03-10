@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buton animat</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			margin: 10px;
+			border: 2px solid #222;
+			border-radius: 30px;
+			text-align: center;
+			background-color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			color: #222;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.button::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: all 0.5s ease;
+			z-index: -1;
+		}
+		.button:hover::before {
+			width: 500px;
+			height: 500px;
+			opacity: 1;
+		}
+		.button:nth-child(1)::before {
+			background-color: rgba(255, 0, 0, 0.5);
+		}
+		.button:nth-child(2)::before {
+			background-color: rgba(0, 255, 0, 0.5);
+		}
+		.button:nth-child(3)::before {
+			background-color: rgba(0, 0, 255, 0.5);
+		}
+		.button:nth-child(4)::before {
+			background-color: rgba(255, 255, 0, 0.5);
+		}
+		.button:nth-child(5)::before {
+			background-color: rgba(0, 255, 255, 0.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="button">Evidenta economica</div>
+	<div class="button">Contabilitatea veriga de baza a entitatilor</div>
+	<div class="button">Obiectul si metoda contabilitatii</div>
+	<div class="button">Categorii specifice obiectului de studiu al contabilitatii</div>
+	<div class="button">Imobilizari financiare(Investitii financiare pe termen lung)</div>
+    <div class="button">Activele circulante</div>
+    <div class="button">Pasivul patrimonial</div>
+</body>
+</html>
